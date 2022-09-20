@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="73" y="45" width="1024" height="458"/>
+    </constraints>
+    <properties>
+      <background color="-14145496"/>
+      <enabled value="true"/>
+      <foreground color="-16777216"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="ede1" class="javax.swing.JLabel" binding="MainDisplayText">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1320014"/>
+          <text value="Main Display :"/>
+        </properties>
+      </component>
+      <component id="55ec3" class="javax.swing.JComboBox" binding="mainMonitorSelect">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Not Set"/>
+          </model>
+        </properties>
+      </component>
+      <vspacer id="b96c2">
+        <constraints>
+          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="5f338" class="javax.swing.JLabel" binding="SecondDisplayText">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1320014"/>
+          <text value="Second Display :"/>
+        </properties>
+      </component>
+      <vspacer id="3feed">
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="f7131" class="javax.swing.JComboBox" binding="secondMonitorSelect">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Not Set"/>
+          </model>
+        </properties>
+      </component>
+      <component id="c1409" class="javax.swing.JLabel" binding="RelPosText">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1320014"/>
+          <text value="Relative position of second monitor"/>
+        </properties>
+      </component>
+      <component id="305b4" class="javax.swing.JComboBox" binding="posSelect">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Above"/>
+            <item value="Below"/>
+            <item value="Left"/>
+            <item value="Right"/>
+          </model>
+        </properties>
+      </component>
+      <component id="8ff6b" class="javax.swing.JButton" binding="setButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Set"/>
+        </properties>
+      </component>
+      <component id="81570" class="javax.swing.JButton" binding="removeAllButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Remove all"/>
+        </properties>
+      </component>
+      <component id="eec10" class="javax.swing.JLabel" binding="textOutput">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1320014"/>
+          <text value="Select settings and press set, then apply when finished"/>
+        </properties>
+      </component>
+      <component id="3fdc" class="javax.swing.JButton" binding="applyButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Apply"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
