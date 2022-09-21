@@ -33,11 +33,6 @@ public class GUI extends JFrame{
         setButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // get displays to connect and direction
-                    //TODO
-                // check connection is valid
-                    //TODO
-                // make connection
                 Direction direction = Direction.values()[posSelect.getSelectedIndex()];
                 Integer mainMonitor = mainMonitorSelect.getSelectedIndex();
                 Integer secondMonitor = secondMonitorSelect.getSelectedIndex();

@@ -16,6 +16,13 @@ public class ConnectionManager {
 
     }
 
+    public void updateDisplays(GraphicsDevice[] devices){
+        displays.clear();
+        for (GraphicsDevice device : devices){
+            displays.add(new Display(device));
+        }
+    }
+
     public ArrayList<Display> getDisplays(){
         return displays;
     }
