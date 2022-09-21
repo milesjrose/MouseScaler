@@ -1,5 +1,4 @@
-import DisplayConnections.ConnectionManager;
-import DisplayConnections.Display;
+import DisplayConnections.*;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -17,7 +16,14 @@ public class MainApp {
         gui.updateMonitorBoxes();
 
 
-
+        // test
+        conManager.connect(0, 0, Direction.LEFT);
+        ArrayList<DisplayConnection> connections  = conManager.getConnections();
+        for (DisplayConnection connection: connections){
+            for (Boundary boundary: connection.getBoundaries()){
+                System.out.println(boundary.toString());
+            }
+        }
 
 
     }

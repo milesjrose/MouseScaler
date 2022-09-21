@@ -1,6 +1,4 @@
-import DisplayConnections.ConnectionManager;
-import DisplayConnections.Direction;
-import DisplayConnections.Display;
+import DisplayConnections.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -20,6 +18,7 @@ public class GUI extends JFrame{
     private JButton applyButton;
     private JLabel SecondDisplayText;
     private JLabel RelPosText;
+    private JButton printBoundsButton;
     private final ConnectionManager connectionManager;
 
     public GUI(String title, ConnectionManager connectionManager){
@@ -46,6 +45,16 @@ public class GUI extends JFrame{
         applyButton.addActionListener(e -> {
             //TODO
             textOutput.setText("Applied");
+        });
+        printBoundsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for (DisplayConnection displayConnection : connectionManager.getConnections()){
+                    for (Boundary boundary: displayConnection.getBoundaries()){
+                        System.out.println(boundary.toString());
+                    }
+                }
+            }
         });
     }
 

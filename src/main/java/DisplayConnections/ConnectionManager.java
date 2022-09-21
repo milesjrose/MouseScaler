@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ConnectionManager {
-    private ArrayList<Display> displays;
+    private final ArrayList<Display> displays;
     private ArrayList<DisplayConnection> connections;
 
     public ConnectionManager(GraphicsDevice[] devices){
@@ -31,6 +31,9 @@ public class ConnectionManager {
         //add error checking
         connections.add(new DisplayConnection(displays.get(display1No), displays.get(display2No), direction));
     }
+
+    public ArrayList<DisplayConnection> getConnections(){return connections;}
+
 
     public void clearConnections(){
         connections.clear();
