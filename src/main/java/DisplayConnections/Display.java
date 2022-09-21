@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class Display {
 
-    private String name;
-    private Integer height;
-    private Integer width;
-    private Integer refreshRate;
+    private final String name;
+    private final Integer height;
+    private final Integer width;
+    private final Integer refreshRate;
 
-    private java.awt.Rectangle bounds;
+    private final java.awt.Rectangle bounds;
 
     public Display(GraphicsDevice display){
         this.name = display.getIDstring();
@@ -21,12 +21,10 @@ public class Display {
     }
 
     public String getComboName(){
-        String comboName =
-                this.name + ", " +
+        return this.name + ", " +
                 this.height + "x" +
                 this.width + ", " +
                 this.refreshRate + "hz";
-        return comboName;
     }
 
     public java.awt.Rectangle getBounds(){

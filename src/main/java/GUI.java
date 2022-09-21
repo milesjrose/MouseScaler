@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+@SuppressWarnings("ALL")
 public class GUI extends JFrame{
     private JPanel mainPanel;
     public JComboBox mainMonitorSelect;
@@ -19,7 +20,7 @@ public class GUI extends JFrame{
     private JButton applyButton;
     private JLabel SecondDisplayText;
     private JLabel RelPosText;
-    private ConnectionManager connectionManager;
+    private final ConnectionManager connectionManager;
 
     public GUI(String title, ConnectionManager connectionManager){
         super(title);
@@ -30,30 +31,21 @@ public class GUI extends JFrame{
         this.setVisible(true);
         this.connectionManager = connectionManager;
 
-        setButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Direction direction = Direction.values()[posSelect.getSelectedIndex()];
-                Integer mainMonitor = mainMonitorSelect.getSelectedIndex();
-                Integer secondMonitor = secondMonitorSelect.getSelectedIndex();
-                connectionManager.connect(mainMonitor, secondMonitor, direction);
-                textOutput.setText("Connected display " + secondMonitor + " to display " + mainMonitor + "'s " + direction.toString());
+        setButton.addActionListener(e -> {
+            Direction direction = Direction.values()[posSelect.getSelectedIndex()];
+            Integer mainMonitor = mainMonitorSelect.getSelectedIndex();
+            Integer secondMonitor = secondMonitorSelect.getSelectedIndex();
+            connectionManager.connect(mainMonitor, secondMonitor, direction);
+            textOutput.setText("Connected display " + secondMonitor + " to display " + mainMonitor + "'s " + direction.toString());
 
-            }
         });
-        removeAllButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                connectionManager.clearConnections();
-                textOutput.setText("Cleared all connections");
-            }
+        removeAllButton.addActionListener(e -> {
+            connectionManager.clearConnections();
+            textOutput.setText("Cleared all connections");
         });
-        applyButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO
-                textOutput.setText("Applied");
-            }
+        applyButton.addActionListener(e -> {
+            //TODO
+            textOutput.setText("Applied");
         });
     }
 
